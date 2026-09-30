@@ -1,276 +1,312 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Syed Ali Hussnain | A Web Developer based in Lahore, Pakistan.
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blancy | Full Stack & Game Developer</title>
+  <meta name="description" content="Portfolio de Blancy, desarrolladora Full Stack y de videojuegos.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">Blancy<span>.dev</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#contacto" class="btn-contact">Contacto</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menú">☰</button>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Syed Ali Hussnain</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">¡Hola! Soy</p>
+      <h1 class="hero-title">Blancy</h1>
+      <h2 class="hero-subtitle">
+        <span class="typing"></span>
+      </h2>
+      <p class="hero-desc">
+        Full Stack Developer · Mobile · Game Dev
+      </p>
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="assets/cv/Blancy-CV.pdf" class="btn btn-outline" download>Descargar CV</a>
       </div>
+      <div class="hero-socials">
+        <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://TU-USUARIO.itch.io" target="_blank" rel="noopener" aria-label="itch.io">itch.io</a>
+      </div>
+    </div>
+    <div class="hero-avatar">
+      <img src="assets/img/profile.webp" alt="Foto de Blancy" loading="lazy">
     </div>
   </header>
 
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
-      </div>
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section">
+    <h2 class="section-title">👩‍💻 Sobre mí</h2>
+    <div class="about-grid">
+      <p>
+        Desarrolladora <strong>Full Stack</strong> con formación en 
+        <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, especializada en todo el ciclo de vida del software.
+      </p>
+      <p>
+        Trabajo con <strong>Java (Spring Boot)</strong>, <strong>Node.js (NestJS)</strong> y <strong>.NET</strong> para crear APIs robustas. 
+        En frontend uso <strong>Angular, Ionic y TypeScript</strong>, y tengo experiencia móvil con <strong>Flutter</strong> y <strong>Android</strong>.
+      </p>
+      <p>
+        Además, tengo formación en <strong>Unity</strong>, <strong>Unreal Engine</strong> y <strong>Godot</strong>, 
+        lo que me aporta una visión amplia del desarrollo interactivo.
+      </p>
     </div>
   </section>
 
-  <!-- ***** Footer ***** -->
+  <!-- STACK -->
+  <section id="stack" class="section section-dark">
+    <h2 class="section-title">🧠 Stack Tecnológico</h2>
+    <div class="stack-grid">
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
+      <div class="stack-card">
+        <h3>🚀 Backend</h3>
+        <ul>
+          <li>Java (Spring Boot)</li>
+          <li>Node.js (NestJS)</li>
+          <li>.NET / C#</li>
+        </ul>
       </div>
+
+      <div class="stack-card">
+        <h3>🎨 Frontend & Web</h3>
+        <ul>
+          <li>Angular</li>
+          <li>Ionic</li>
+          <li>TypeScript</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>📱 Mobile</h3>
+        <ul>
+          <li>Flutter</li>
+          <li>Android (Java)</li>
+          <li>iOS (Swift)</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>🗄️ Bases de Datos</h3>
+        <ul>
+          <li>SQL</li>
+          <li>MongoDB</li>
+          <li>Cloudinary</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>🎮 Game Dev</h3>
+        <ul>
+          <li>Unity (C#)</li>
+          <li>Unreal Engine (C++ / Blueprints)</li>
+          <li>Godot (GDScript)</li>
+        </ul>
+      </div>
+
+      <div class="stack-card">
+        <h3>⚙️ DevOps & Otros</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>Render</li>
+          <li>Metodologías Ágiles</li>
+          <li>POO</li>
+        </ul>
+      </div>
+
     </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="section">
+    <h2 class="section-title">💼 Experiencia</h2>
+    <div class="timeline">
+
+      <article class="timeline-item">
+        <div class="timeline-date">mar. 2026 – jun. 2026</div>
+        <div class="timeline-content">
+          <h3>Desarrollo Full Stack (Mobile & Backend)</h3>
+          <h4>Hyliacom · Prácticas · Híbrido</h4>
+          <ul>
+            <li>Frontend móvil reactivo con <strong>Flutter</strong>.</li>
+            <li>API REST robusta con <strong>NestJS</strong>.</li>
+            <li>Modelado NoSQL en <strong>MongoDB</strong> + <strong>Cloudinary</strong>.</li>
+            <li>Deployment en la nube con <strong>Render</strong>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">abr. 2025 – jul. 2025</div>
+        <div class="timeline-content">
+          <h3>Diseñador de Interfaces de Usuario</h3>
+          <h4>HechicerIA · Prácticas · Remoto</h4>
+          <ul>
+            <li>Diseño de sistemas e interfaces para personalización de personajes.</li>
+            <li>Implementación en <strong>UMG (Unreal Motion Graphics)</strong>.</li>
+            <li>Documentación técnica: guías de estilo y flujos de usuario.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">jul. 2024 – sept. 2024</div>
+        <div class="timeline-content">
+          <h3>Programador de Videojuegos</h3>
+          <h4>NINJU Games · Prácticas · Remoto</h4>
+          <ul>
+            <li>Desarrollo con <strong>Godot</strong> y <strong>GDScript</strong>.</li>
+            <li>Creación de escenas y scripts interactivos.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-date">feb. 2022 – may. 2022</div>
+        <div class="timeline-content">
+          <h3>Prácticas de Diseño Gráfico y Redes Sociales</h3>
+          <h4>Col·legi Oficial de Metges de Lleida · Presencial</h4>
+          <ul>
+            <li>Diseño de publicaciones y materiales médicos.</li>
+            <li>Gestión web y redes sociales.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section section-dark">
+    <h2 class="section-title">🚀 Proyectos</h2>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="web">Web / Mobile</button>
+      <button class="filter-btn" data-filter="game">Videojuegos</button>
+      <button class="filter-btn" data-filter="ui">UI / Diseño</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card" data-category="web">
+        <img src="assets/img/proyectos/dueglow.webp" alt="DueGlow" loading="lazy">
+        <div class="project-info">
+          <h3>DueGlow</h3>
+          <p>Aplicación móvil Full Stack: Flutter + NestJS + MongoDB + Cloudinary. Desplegada en Render.</p>
+          <div class="tags">
+            <span>Flutter</span><span>NestJS</span><span>MongoDB</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="game">
+        <img src="assets/img/proyectos/bomberman.webp" alt="Bomberman 3D" loading="lazy">
+        <div class="project-info">
+          <h3>Bomberman 3D</h3>
+          <p>Recreación 3D en Unity. Lógica, físicas, niveles y UX completa. Proyecto final de máster.</p>
+          <div class="tags">
+            <span>Unity</span><span>C#</span><span>3D</span>
+          </div>
+          <a href="https://TU-USUARIO.itch.io" target="_blank" class="project-link">Jugar →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="game">
+        <img src="assets/img/proyectos/tank-vanguard.webp" alt="Tank Vanguard" loading="lazy">
+        <div class="project-info">
+          <h3>Tank Vanguard</h3>
+          <p>Juego de tanques en Unreal Engine 5 con mecánicas de movimiento y sistema de disparo.</p>
+          <div class="tags">
+            <span>Unreal 5</span><span>Blueprints</span><span>C++</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="ui">
+        <img src="assets/img/proyectos/hechiceria.webp" alt="HechicerIA" loading="lazy">
+        <div class="project-info">
+          <h3>HechicerIA - UI</h3>
+          <p>Diseño de interfaces y componentes UMG para personalización de personajes y chatbot.</p>
+          <div class="tags">
+            <span>UMG</span><span>UX/UI</span><span>Unreal</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN -->
+  <section id="educacion" class="section">
+    <h2 class="section-title">🎓 Educación</h2>
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <h3>Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+        <p class="edu-center">PROGRESA Centro de Formación Profesional</p>
+        <p class="edu-date">sept. 2024 – jun. 2026</p>
+        <p>Stack backend (Java/Spring, Node, .NET), frontend y mobile.</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Máster en Programación de Videojuegos y RA (Unity)</h3>
+        <p class="edu-center">Tokio School</p>
+        <p class="edu-date">mar. 2022 – may. 2024 · Nota: 9</p>
+        <p>Desarrollo 2D/3D, mecánicas, UI/UX y RV/RA.</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Máster en Programación de Videojuegos (Unreal Engine)</h3>
+        <p class="edu-center">Tokio School</p>
+        <p class="edu-date">mar. 2022 – mar. 2024 · Nota: 9</p>
+        <p>Blueprints, C++, IA, Landscape/Foliage.</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Diseño Digital y Tecnologías Creativas</h3>
+        <p class="edu-center">Universitat de Lleida</p>
+        <p class="edu-date">2019 – 2022</p>
+        <p>Mención en Videojuegos. Programación, diseño gráfico y análisis.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section section-dark">
+    <h2 class="section-title">📬 Contacto</h2>
+    <p class="contact-text">¿Tienes un proyecto en mente o quieres colaborar? ¡Escríbeme!</p>
+    <div class="contact-links">
+      <a href="mailto:TU-EMAIL@example.com" class="btn btn-primary">Enviar email</a>
+      <a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" class="btn btn-outline">LinkedIn</a>
+      <a href="https://github.com/TU-USUARIO" target="_blank" class="btn btn-outline">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Blancy · Hecho con 💜 y mucho café</p>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
