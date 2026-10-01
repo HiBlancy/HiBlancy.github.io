@@ -9,7 +9,6 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Cerrar menú al hacer click en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
@@ -17,31 +16,31 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // ===== EFECTO TYPING EN HERO =====
 const typingElement = document.querySelector('.typing');
 const phrases = [
-  'Full Stack Developer ',
-  'Mobile Developer ',
-  'Game Developer ',
-  'UI/UX Designer '
+  'Full Stack Developer.',
+  'Mobile Developer.',
+  'Game Developer.',
+  'UI/UX Designer.'
 ];
 let phraseIndex = 0, charIndex = 0, isDeleting = false;
 
 function typeEffect() {
   const currentPhrase = phrases[phraseIndex];
-  
+
   if (isDeleting) {
     typingElement.textContent = currentPhrase.substring(0, charIndex--);
   } else {
     typingElement.textContent = currentPhrase.substring(0, charIndex++);
   }
 
-  let speed = isDeleting ? 50 : 100;
+  let speed = isDeleting ? 45 : 90;
 
   if (!isDeleting && charIndex === currentPhrase.length) {
-    speed = 2000;
+    speed = 2200;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     phraseIndex = (phraseIndex + 1) % phrases.length;
-    speed = 500;
+    speed = 400;
   }
 
   setTimeout(typeEffect, speed);
@@ -54,7 +53,6 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Activar botón
     filterButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
@@ -64,7 +62,7 @@ filterButtons.forEach(btn => {
       const category = card.dataset.category;
       if (filter === 'all' || category === filter) {
         card.classList.remove('hidden');
-        card.style.animation = 'fadeIn 0.5s ease';
+        card.style.animation = 'fadeIn 0.45s ease';
       } else {
         card.classList.add('hidden');
       }
@@ -72,39 +70,26 @@ filterButtons.forEach(btn => {
   });
 });
 
-// ===== ANIMACIÓN FADE IN AL SCROLL =====
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
+// ===== REVEAL AL SCROLL =====
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, observerOptions);
-
-// Aplicar a secciones y tarjetas
-document.querySelectorAll('.section, .stack-card, .project-card, .edu-card, .timeline-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
+}, {
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px'
 });
 
-// ===== ANIMACIÓN FADE IN PARA FILTROS =====
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-`;
-document.head.appendChild(style);
+document.querySelectorAll(
+  '.section-title, .about-grid, .stack-card, .timeline-item, .project-card, .edu-card, .contact-text, .contact-links'
+).forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = `${(i % 6) * 0.06}s`;
+  observer.observe(el);
+});
 
 // ===== SCROLL SUAVE CON OFFSET PARA NAVBAR =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -112,7 +97,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      const offset = 80;
+      const offset = 72;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
